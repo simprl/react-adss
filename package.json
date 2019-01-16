@@ -1,6 +1,6 @@
 {
   "name": "react-adss",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Action->Dispatch->Services->Store flow connected to React",
   "main": "lib/adss.js",
   "module": "es/adss.js",
