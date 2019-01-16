@@ -2,7 +2,13 @@
   "name": "react-adss",
   "version": "1.0.1",
   "description": "Action->Dispatch->Services->Store flow connected to React",
-  "main": "index.js",
+  "main": "lib/adss.js",
+  "module": "es/adss.js",
+  "files": [
+    "lib",
+    "es",
+    "src"
+  ],
   "scripts": {
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
     "build:es": "babel src --out-dir es",

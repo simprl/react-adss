@@ -1,5 +1,8 @@
 # React-ADSS
 Action->Dispatch->Services->Store flow connected to React
+
+There is more information in npm module [adss](https://www.npmjs.com/package/adss)
+
 ## Installation
 ```sh
 npm install --save react-adss
@@ -60,7 +63,6 @@ Use provider and container:
     <MyContainer />
 </Provider>
 ```
-
 
 ## Example
 Clone repository from https://github.com/simprl/react-adss
