@@ -1,15 +1,6 @@
-# React-ADSS
-Action->Dispatch->Services->Store flow connected to React
-## Installation
-```sh
-npm install --save react-adss
-```
-## Usage
-Create logic:
-```js
-import { createLogic } from 'adss'
-const logic = createLogic()
+Provider example:
 
+```js
 const delay  = (t) => new Promise((resolve) => setTimeout(resolve, t))
 const updater = (reducer) => (store) => ({...store, y1: reducer(store.y1)})
 const stateAction = (reducer) => ({setState}) => setState(updater(reducer))
@@ -25,9 +16,6 @@ const incMultValue = (inc, mult) => async function f({ dispatch }) {
 const incMultValueOnce = (inc, mult) => ({ hold }) => { 
     hold(incMultValue(inc, mult))
 }
-```
-Create Container:
-```jsx harmony
 const MyComponent = (props) => {
   console.log('render')
   return <div>
@@ -53,26 +41,8 @@ const actionsToProps = {
   onChangeV2: ({ target: { value } }) => setV2(value)
 }
 const MyContainer = connect(stateToProps, actionsToProps)(MyComponent)
-```
-Use provider and container:
-```jsx harmony
-<Provider logic={logic}>
-    <MyContainer />
+
+;<Provider logic={logic} >
+<MyContainer/>
 </Provider>
 ```
-
-
-## Example
-Clone repository from https://github.com/simprl/react-adss
-
-Run script for initialize npm
-```
-npm i
-```
-  
-Run styleguide script for see example in the browser
-```
-npm run styleguide
-```  
-## License
-MIT
